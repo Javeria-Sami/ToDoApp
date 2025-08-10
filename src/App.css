@@ -1,0 +1,104 @@
+*
+{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.main
+{
+    height: 100vh;
+    width: 100vw;
+    background-color:white;
+
+}
+
+.main h1
+{
+    background-color: rgb(78, 24, 128);
+    color: white;
+    text-align: center;
+}
+
+.title-div
+{
+    height: 130px;
+    width: 550px;
+    display: flex;
+    flex-direction: column;
+    flex-basis: 30%;
+    gap: 15px;
+    /* background-color: aqua; */
+    margin: auto;
+    border: 2px solid rgba(71, 70, 70, 0.352);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15); /* light grey shadow */
+
+   
+}
+.todo-input
+{
+    width: 90% ;
+    margin: auto;
+    padding: 12px;
+    margin-top: 14px ;
+    border: 2px solid rgba(180, 180, 180, 0.742); 
+   
+}
+.todo-input:focus {
+  outline: none !important;                  
+  border: 2px solid rgba(180, 180, 180, 0.742) !important;        
+  box-shadow: none !important;          
+}
+
+.purple-btn
+{
+    height: 40px;
+    width: 65px;
+    border-radius:2px ;
+    margin: auto;
+    margin-bottom: 6px;
+    background-color:rgb(78, 24, 128);
+    color: white;
+}
+.purple-btn:hover
+{
+  background-color: #61269c; 
+  color: white;
+  cursor: pointer;
+}
+
+.outerDiv
+{
+   width: 1170px;
+   margin: auto;
+}
+.outerDiv ul
+{   
+    margin-top: 50px;
+    list-style: none;
+}
+.outerDiv ul li
+{
+    color: black;
+    padding: 10px;
+    font-size: 25px;
+    margin-bottom: 20px;
+    position: relative;
+    text-align: left;
+    background-color:white; 
+    border: 2px solid rgba(71, 70, 70, 0.352);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15); 
+}
+.outerDiv ul li span
+{
+    right: 20px;
+    position: absolute;
+    cursor: pointer;
+    color: red;
+}
+.completeTodo
+{
+    text-decoration: line-through;
+    color: black !important;
+    /* background-color: yellow !important; */
+}
