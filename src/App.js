@@ -12,23 +12,29 @@ function App() {
   let[todolist,setTodolist]=useState([])
 
   let addToDoList=(event)=>{
+    event.preventDefault();
     let toDoName=event.target.toDoName.value;
-    // alert(toDoName);
-    if(!todolist.includes(toDoName)){
+   
+    if(toDoName === '') {
+    toast.error("Please enter a task before adding!");
+    return; 
+    }
+    else if(!todolist.includes(toDoName)){
       let finalTododlist=[...todolist,toDoName]
       setTodolist(finalTododlist)
+      event.target.toDoName.value = '';
     }
 
     else{
       toast.error("To Do Name already exists!");
-
+      event.target.toDoName.value = '';
     }
-    event.preventDefault();
+    
   }
 
   let list=todolist.map((value,index)=>{
     return(
-      < TodolistItems value={value} key={index} indexNumber={index} todolist={todolist} setTodolist={setTodolist}/>
+      < TodolistItems value={value}  key={value} indexNumber={index} todolist={todolist} setTodolist={setTodolist}/>
     )
   })
 
@@ -42,8 +48,6 @@ function App() {
       
       <div className='outerDiv'>
         <ul>
-          {/* <li>HTML <span> <i className="bi bi-trash3"></i></span></li>  */}
-          {/* < TodolistItems/> */}
           {list}
         </ul>
       </div>
@@ -61,7 +65,6 @@ function TodolistItems({value, indexNumber, todolist, setTodolist }){
 
   let[status,setStatus]=useState(false)
   let deleteRow=()=>{
-    // alert(indexNumber)
     let finalData=todolist.filter((v,i)=>i!=indexNumber)
     setTodolist(finalData);
   }

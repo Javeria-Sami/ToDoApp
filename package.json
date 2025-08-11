@@ -2,7 +2,7 @@
   "name": "ecommerce",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://Javeria-Sami.github.io/ToDoApp.git",
+  "homepage": "https://javeria-sami.github.io/ToDoApp",
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
